@@ -1,0 +1,24 @@
+name: etiquetas_camda
+description: Etiquetas CAMDA - fila de etiquetas que imprime direto na Zebra por Bluetooth classico (SPP)
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Bluetooth CLASSICO (SPP/RFCOMM) so no Android - e o que a Zebra fala. Nao e BLE.
+  # Lista os pareados, conecta no UUID SPP 00001101 e envia bytes brutos (ZPL).
+  flutter_bluetooth_classic_serial: 1.3.2
+  permission_handler: ^12.0.0
+  shared_preferences: ^2.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
