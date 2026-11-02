@@ -16,3 +16,4 @@ jobs:
       - run: flutter pub get
       - run: flutter analyze
       - run: flutter test
+      - run: python3 tool/verify_sql.py

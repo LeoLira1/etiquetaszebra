@@ -56,11 +56,17 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
+      - name: Generate launcher icons
+        run: dart run flutter_launcher_icons
+
       - name: Analyze
         run: flutter analyze
 
       - name: Test
         run: flutter test
+
+      - name: Verify SQL
+        run: python3 tool/verify_sql.py
 
       - name: Build APK release
         run: flutter build apk --release
